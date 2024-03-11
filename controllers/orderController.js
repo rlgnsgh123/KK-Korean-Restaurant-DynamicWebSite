@@ -5,7 +5,7 @@ const{Admin} = require("../models/adminModel");
 const getOrder = async (req, res)=>{
     res.render("pages/order");
 };
-
+//sd
 const postOrder = (req, res) =>{
         
     let errors = validationResult(req);

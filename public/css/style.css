@@ -1,0 +1,92 @@
+body {
+    width: 1100px;
+    margin:30px auto;
+}
+h1{
+    text-align: center;
+}
+
+#orderForm{
+    width:600px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    border: 2px solid;
+    border-radius: 8px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+#orderForm label{
+    padding-top:5px;
+}
+#orderForm input{
+   float: right;
+    width: 300px;
+    height: 30px;
+}
+
+#orderForm div{
+    
+    margin: auto 40px;
+}
+
+#errorMessage{
+    position: relative;
+    float: right;
+    width: 460px;
+    font-size: 14px;
+    color: red;
+}
+
+button{
+    margin-left: 170px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#type{
+    width: 100%;
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
+#receiptInformation {
+    margin-top: 30px;
+    margin-left: 200px;
+   
+}
+
+#receiptInformation tbody{
+    display:block;
+    border: 2px solid black;
+    border-collapse: separate;
+    border-spacing: 4px;   
+}
+
+#receiptInformation td{
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+.link-primary{
+    font-size: x-large;
+}
+#login{
+    margin-top: 20px;
+}
+
+#footer p{
+    margin-left: 150px;
+    clear: both;
+}

@@ -1,0 +1,64 @@
+<head>
+    <%- include("../shared/head") %>
+</head>
+<body>
+    <div class="container">
+        <h1>All Orders</h1>
+        <div class="d-flex">
+            <p>AminName : <%= username %><br></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        <br><a class="link-primary" href="/">Order a Korean Food</a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="link-primary" href="/logout">Logout</a>
+        </div>
+        <!-- All Orders Table -->
+        <% if(typeof orders !== "undefined") {%>
+        <table class="table" id="table">
+            <thead>
+                 <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Kimchi</th>
+                    <th scope="col">Red Chicken</th>
+                    <th scope="col">Bulgogi Gimbab(Rice roll)</th>
+                    <th scope="col">SubTotal</th>
+                    <th scope="col">Tax</th>
+                    <th scope="col">Total</th>
+                 </tr>
+                </thead>
+                <tbody>
+                    <%orders.forEach(order =>{%>
+                  <tr>
+                    <td>
+                      <%= order.name %>
+                    </td>
+                    <td>
+                      <%= order.phone %>
+                    </td>
+                    <td>
+                      <%= order.qKimchi %>
+                    </td>
+                    <td>
+                      <%= order.qChicken %>
+                    </td>
+                    <td>
+                      <%= order.qBGimbab %>
+                    </td>
+                    <td>
+                      $<%= order.subTotal %>
+                    </td>
+                    <td>
+                      $<%= order.tax %>
+                    </td>
+                    <td>
+                      $<%= order.total %>
+                    </td>
+                  </tr>
+                </tbody>
+                <% }) %>               
+            <% } %>      
+            </table>
+            
+        <%- include("../shared/footer") %>
+    </div>
+    <%- include("../shared/scripts") %>
+</body>

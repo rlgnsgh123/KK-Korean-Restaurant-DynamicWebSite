@@ -1,0 +1,55 @@
+<head>
+    <%- include("../shared/head") %>
+</head>
+<body>
+    <div class="container">
+        <h1>Order a Korean Food</h1>
+        <div class="d-flex">
+            <a class="link-primary" href="/login">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="link-primary" href="/orders">View Orders</a>
+        </div>
+
+        <!-- Form Errors -->
+        <div id="errorMessage">
+            <% if (typeof errorS !== "undefined"){for(let error of errorS){%>
+                    <p>
+                        <%= error.msg %>
+                    </p>
+            <% }}%>
+            <% if (typeof errorS !== "undefined"){%>
+                <p>
+                    <%= priceEroorS %>
+                </p>
+            <% }%>
+        </div>
+
+        <!-- Order Form -->
+            <form id="orderForm"  method="post" action="/order">
+                <div>
+                    <label for="name" class="form-label">Name*:</label>
+                    <input type="text" class="form-control"  name="name"/> 
+                </div>
+                <div>
+                    <label for="phone" class="form-label">Phone*:</label>
+                    <input type="text" class="form-control" name="phone"/>
+                </div>
+                <div>
+                    <label for="kimchi" class="form-label">Kimchi:</label>
+                    <input type="text" class="form-control" name="qKimchi"/>
+                </div>
+                <div>
+                    <label for="chicken" class="form-label">Red Chicken:</label>
+                    <input type="text" class="form-control" name="qChicken"/>
+                </div>
+                <div>
+                    <label for="gimbab" class="form-label">Bulgogi Gimbab(Rice roll):</label>
+                    <input type="text" class="form-control" name="qBGimbab"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>  
+            </form>
+            <div id="footer">
+                <%- include("../shared/footer") %>
+            </div>  
+    </div>
+    <%- include("../shared/scripts") %>
+</body>
